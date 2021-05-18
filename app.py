@@ -26,9 +26,9 @@ def predict(TOFEL: float, LOR: float, CGPA:float, Research:str):
        x=1
    else:
        x=0
-   x1=TOFEL/120
-   x2=LOR/5
-   x3=CGPA/10
+   x1=(TOFEL-90)/(120-90)
+   x2=(LOR-1)/(5-1)
+   x3=(CGPA-6)/(10-6)
    data=np.array([1,x1,x2,x3,x])
    prediction = model.predict(data)
    return {
