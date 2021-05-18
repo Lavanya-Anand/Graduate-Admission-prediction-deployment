@@ -21,7 +21,7 @@ async def root():
    return {"message": "Hello World"}
 
 @app.post("/predict")
-def predict(GRE: float,TOFEL: float,University: float,SOP: float, LOR: float, CGPA:float, Research:str):
+def predict(TOFEL: float, LOR: float, CGPA:float, Research:str):
    if Research=='yes':
        x=1
    else:
